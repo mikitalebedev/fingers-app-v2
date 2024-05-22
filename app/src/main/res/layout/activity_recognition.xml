@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".RecognitionActivity"
+    tools:ignore="ExtraText">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="fill_parent"
+        android:layout_height="440dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.436">
+
+        <org.opencv.android.JavaCameraView
+            android:id="@+id/my_camera_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        </org.opencv.android.JavaCameraView>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Вопрос и буква -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/question_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#F9FBFF"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="5dp"
+        app:cardMaxElevation="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/card"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.1">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_max="220dp"
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/result_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=" "
+                android:textColor="#8A19D6"
+                android:textSize="38sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <Button
+        android:id="@+id/recognition_mode_button"
+        android:layout_width="209dp"
+        android:layout_height="38dp"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/button_background"
+        android:text="Режим тестирования"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/switch_camera_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toEndOf="@+id/help_button" />
+
+    <ImageView
+        android:id="@+id/switch_camera_button"
+        android:layout_width="52dp"
+        android:layout_height="47dp"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="12dp"
+        android:onClick="onSwitchCameraButtonClick"
+        android:src="@drawable/switch_camera_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside" />
+
+    <ImageView
+        android:id="@+id/exit_button"
+        android:layout_width="41dp"
+        android:layout_height="34dp"
+        android:layout_margin="16dp"
+        android:layout_marginEnd="20dp"
+        android:onClick="onExitButtonClick"
+        android:src="@drawable/cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Функции -->
+
+    <ImageView
+        android:id="@+id/help_button"
+        android:layout_width="43dp"
+        android:layout_height="37dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Помощь"
+        android:src="@drawable/help_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/propability_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="20dp"
+        android:contentDescription="Вероятность"
+        android:padding="4dp"
+        android:src="@drawable/propability_icon"
+        app:layout_constraintBottom_toTopOf="@+id/recognition_mode_button"
+        app:layout_constraintEnd_toStartOf="@+id/space_button"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/space_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Пробел"
+        android:padding="4dp"
+        android:src="@drawable/space_icon"
+        app:layout_constraintBottom_toTopOf="@+id/recognition_mode_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/delete_button"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_margin="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginBottom="12dp"
+        android:contentDescription="Задержите кнопку, чтобы очистить"
+        android:padding="4dp"
+        android:src="@drawable/delete_icon"
+        app:layout_constraintBottom_toTopOf="@+id/recognition_mode_button"
+        app:layout_constraintStart_toEndOf="@+id/space_button"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <!-- Уведомление вероятности -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/probability_notification_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="504dp"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:cardBackgroundColor="#F9FBFF"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/space_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/probability_notification"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F9FBFF"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text=""
+            android:textColor="#8A19D6" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

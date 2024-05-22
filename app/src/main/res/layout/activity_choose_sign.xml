@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".GameChooseSign">
+
+    <!-- Top Card -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="387dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_e"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="214dp"
+                    android:layout_height="31dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="66dp"
+                    android:layout_marginTop="17dp"
+                    android:layout_marginEnd="91dp"
+                    android:text="Выбери символ"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvSubtitle"
+                    android:layout_width="219dp"
+                    android:layout_height="63dp"
+                    android:layout_below="@id/tvTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:gravity="center"
+                    android:text="Правильно ли сопоставлен символ и буква?"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/back_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="0dp"
+                    android:src="@drawable/ic_back" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Очки:"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvRound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Раунд:"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Время:"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progress_bar"
+                android:layout_width="match_parent"
+                android:layout_height="8dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="16dp"
+                android:backgroundTint="#E0E0E0"
+                android:progress="50"
+                android:progressTint="#9C27B0" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="330dp"
+                android:layout_height="13dp"
+                android:layout_marginTop="22dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/button_background" />
+
+            <TextView
+                android:id="@+id/tvLetter"
+                android:layout_width="161dp"
+                android:layout_height="168dp"
+                android:layout_marginStart="128dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="122dp"
+                android:layout_marginBottom="32dp"
+                android:background="@drawable/round_violet3"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@color/colorAccentDark"
+                android:textSize="64sp"
+                android:textStyle="bold" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="214dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/button_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="63dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="85dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_border_violet"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btnGesture6"
+                            android:layout_width="41dp"
+                            android:layout_height="41dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/gesture_g"
+                            android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_border_violet"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btnGesture5"
+                            android:layout_width="41dp"
+                            android:layout_height="41dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/gesture_e"
+                            android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/round_border_violet"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btnGesture4"
+                            android:layout_width="41dp"
+                            android:layout_height="41dp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/gesture_d"
+                            android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_border_violet"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btnGesture3"
+                            android:layout_width="41dp"
+                            android:layout_height="41dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/gesture_c"
+                            android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_border_violet"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btnGesture2"
+                            android:layout_width="41dp"
+                            android:layout_height="41dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/gesture_b"
+                            android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/round_border_violet"
+                        android:gravity="center">
+
+                        <Button
+                            android:id="@+id/btnGesture1"
+                            android:layout_width="41dp"
+                            android:layout_height="41dp"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginRight="8dp"
+                            android:layout_marginBottom="8dp"
+                            android:background="@drawable/gesture_a"
+                            android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Score, Round and Timer -->
+
+    <!-- Progress Bar -->
+
+    <!-- Letter Text -->
+
+    <!-- Gesture Grid -->
+
+</RelativeLayout>

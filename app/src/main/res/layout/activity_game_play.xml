@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GamePlayActivity"
+    android:background="#F0F0F0">
+
+    <!-- Top Card -->
+
+    <!-- Score and Timer -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="162dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_e"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/glasses"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/icon" />
+
+                <TextView
+                    android:id="@+id/score_text"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="91dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="93dp"
+                    android:text="Игра да/Нет"
+                    android:textColor="@color/black"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/feedback_text"
+                    android:layout_width="245dp"
+                    android:layout_height="55dp"
+                    android:layout_below="@+id/score_text"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="59dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="59dp"
+                    android:gravity="center"
+                    android:text="Правильно ли сопоставлены символ и буква?"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/scoreabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/score_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="16dp"
+                    android:text="Очки:"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/timer_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_weight="1"
+                    android:text="Время:"
+                    android:textColor="#000000"
+                    android:textSize="24sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="323dp"
+                android:layout_height="12dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/button_background" />
+
+            <RelativeLayout
+                android:layout_width="120dp"
+                android:layout_height="140dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/round_border_violet"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/gesture_image"
+                    android:layout_width="102dp"
+                    android:layout_height="122dp"
+
+                    android:src="@drawable/gesture_a" />
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/view5"
+                android:layout_width="214dp"
+                android:layout_height="4dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/button_background" />
+
+            <TextView
+                android:id="@+id/letter_text"
+                android:layout_width="103dp"
+                android:layout_height="95dp"
+                android:layout_marginTop="23dp"
+                android:background="@drawable/round_violet3"
+                android:gravity="center"
+                android:text="A"
+                android:textColor="@color/colorAccentDark"
+                android:textSize="60sp" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Progress Bar -->
+
+    <!-- Gesture Image -->
+
+    <!-- Letter Text -->
+
+    <!-- Buttons -->
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="#E0E0E0"
+        android:progress="50"
+        android:progressTint="#9C27B0" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/trueOrFalse"
+            android:layout_width="87dp"
+            android:layout_height="60dp"
+
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/round_violet3"
+            android:text="ДА"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/button_no"
+            android:layout_width="87dp"
+            android:layout_height="60dp"
+
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/round_violet3"
+            android:text="НЕТ"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</RelativeLayout>

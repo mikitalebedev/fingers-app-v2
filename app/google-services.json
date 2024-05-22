@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "191680683890",
+    "project_id": "sing-lang-8ffd3",
+    "storage_bucket": "sing-lang-8ffd3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191680683890:android:d0cc8ebe4ab62610b707eb",
+        "android_client_info": {
+          "package_name": "com.example.sign_lang_ml"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvJuCtk4e4ZPIla08Wan11zYPzst3HeAw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

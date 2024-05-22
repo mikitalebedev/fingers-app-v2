@@ -1,0 +1,29 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml:2:1-6:12
+INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml:2:1-6:12
+INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml:2:1-6:12
+	package
+		INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml
+		ADDED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml:2:1-6:12
+		INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml:4:7-34
+	xmlns:android
+		ADDED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml:3:5-31
+uses-sdk
+INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml
+INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml
+INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml
+INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml
+		ADDED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml
+		INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml
+		ADDED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml
+		INJECTED from /Users/evgenijcuprov/Downloads/fingers-app-main-2/openCVLibrary348/src/main/AndroidManifest.xml

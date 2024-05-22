@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Тень -->
+    <item android:bottom="4dp">
+        <shape>
+            <solid android:color="#80E8E7E7" /> <!-- Цвет тени -->
+            <corners android:radius="120dp" />
+        </shape>
+    </item>
+    <!-- Круг -->
+    <item>
+        <shape>
+            <solid android:color="#B66DFF" />
+            <corners android:radius="100dp" />
+        </shape>
+    </item>
+</layer-list>
