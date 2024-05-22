@@ -20,6 +20,7 @@ public class GameChooseSign extends AppCompatActivity {
 
     private TextView tvPoints, tvTime, tvRound, tvLetter;
     private Button[] gestureButtons = new Button[6];
+    Button btn;
     private int points = 0;
     private int round = 1;
     private Handler timerHandler = new Handler();
@@ -36,6 +37,7 @@ public class GameChooseSign extends AppCompatActivity {
     private int currentCorrectGesture;
     private List<String> remainingLetters = new ArrayList<>();
     private Random random = new Random();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,6 +60,16 @@ public class GameChooseSign extends AppCompatActivity {
         initializeRemainingLetters();
         startTimer();
         updateGame();
+
+
+        btn = findViewById(R.id.back_icon);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void initializeLetterToGestureMap() {
@@ -101,7 +113,7 @@ public class GameChooseSign extends AppCompatActivity {
             @Override
             public void run() {
                 secondsElapsed++;
-                tvTime.setText("Time: " + secondsElapsed);
+                tvTime.setText("Время: " + secondsElapsed);
                 timerHandler.postDelayed(this, 1000);
             }
         }, 1000);
@@ -113,7 +125,7 @@ public class GameChooseSign extends AppCompatActivity {
             return;
         }
 
-        tvRound.setText("Round: " + round);
+        tvRound.setText("Раунд: " + round);
 
         if (remainingLetters.isEmpty()) {
             endGame();
@@ -160,7 +172,7 @@ public class GameChooseSign extends AppCompatActivity {
     }
 
     private void updatePointsDisplay() {
-        tvPoints.setText("Points: " + points);
+        tvPoints.setText("Очки: " + points);
     }
 
     private void endGame() {
@@ -175,4 +187,6 @@ public class GameChooseSign extends AppCompatActivity {
         super.onBackPressed();
         finish();
     }
+
+
 }

@@ -47,6 +47,9 @@
         <activity android:name=".ProfileActivity" />
         <activity android:name=".MainActivity"/>
         <activity android:name=".LoginActivity"/>
+        <activity android:name=".GameChooseLetter"/>
+        <activity android:name=".TheoryActivity"/>
+        <activity android:name=".EndActivity"/>
         <activity android:name=".RegistrationActivity"/>
 
 

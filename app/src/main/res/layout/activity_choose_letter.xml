@@ -1,0 +1,262 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F0F0F0"
+    tools:context=".GameChooseLetter">
+
+    <!-- Top Card -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="160dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_e"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="91dp"
+                    android:layout_marginTop="38dp"
+                    android:text="Выбери букву"
+                    android:textColor="#FFFFFF"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/tvSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvTitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="Правильно ли сопоставлен символ и буква?"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/back_icon"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="0dp"
+                    android:background="@drawable/ic_back"
+                     />
+
+            </RelativeLayout>
+
+            <!-- Score, Round and Timer -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp">
+
+                <TextView
+                    android:id="@+id/tvPoints"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Очки: 0"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvRound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Раунд:"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Время:"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </LinearLayout>
+
+            <!-- Progress Bar -->
+
+
+            <!-- Gesture Image -->
+            <ImageView
+                android:id="@+id/ivGesture"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="32dp"
+                android:src="@drawable/gesture_a" />
+
+            <!-- Letter Grid -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="63dp"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round_violet3"
+                    android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnLetter1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:text="А"
+                    android:textSize="24sp"
+                    android:background="@drawable/round_violet3"
+                    android:textColor="#FFFFFF" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round_violet3"
+                    android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnLetter2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_row="0"
+                    android:layout_column="1"
+                    android:layout_gravity="center"
+                    android:text="Б"
+                    android:background="@drawable/round_violet3"
+                    android:textSize="24sp"
+                    android:textColor="#FFFFFF" />
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="75dp"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginBottom="8dp"
+                    android:background="@drawable/round_violet3"
+                    android:gravity="center">
+
+
+                <Button
+                    android:id="@+id/btnLetter3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/round_violet3"
+                    android:text="В"
+                    android:textSize="24sp"
+                    android:textColor="#FFFFFF" />
+                </RelativeLayout>
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_violet3"
+                        android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnLetter4"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:text="Г"
+                    android:textSize="24sp"
+                    android:background="@drawable/round_violet3"
+                    android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_violet3"
+                        android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnLetter5"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:text="Д"
+                    android:background="@drawable/round_violet3"
+                    android:textSize="24sp"
+                    android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="75dp"
+                        android:layout_height="70dp"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginRight="8dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/round_violet3"
+                        android:gravity="center">
+                <Button
+                    android:id="@+id/btnLetter6"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:text="Е"
+                    android:background="@drawable/round_violet3"
+                    android:textSize="24sp"
+                    android:textColor="#FFFFFF" />
+                    </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

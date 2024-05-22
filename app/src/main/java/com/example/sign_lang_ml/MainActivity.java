@@ -120,6 +120,22 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        btnR = findViewById(R.id.chooseLetter);
+        btnR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), GameChooseLetter.class);
+                startActivity(intent);
+            }
+        });
+        btnR = findViewById(R.id.teoryaLiner);
+        btnR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), TheoryActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btn = findViewById(R.id.profile);
         btn.setOnClickListener(new View.OnClickListener() {
