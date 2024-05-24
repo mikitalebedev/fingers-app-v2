@@ -18,8 +18,8 @@ import java.util.Random;
 
 class Classifier {
     private static final String TAG = "Tflite";
-    private static final String MODEL = "model_unquant.tflite";
-    private static final String LABEL = "labels.txt";
+    private static final String MODEL = "model_unquant-7.tflite";
+    private static final String LABEL = "labels-7.txt";
     private static final int DIM_HEIGHT = 224;
     private static final int DIM_WIDTH = 224;
     private static final int BYTES_PER_CHANNEL = 4; // Floating point
@@ -67,23 +67,23 @@ class Classifier {
     }
 
     Mat processMat(Mat mat) {
-        // Determine the size of the square ROI
-        int size = Math.min(mat.cols(), mat.rows()); // Use the smaller dimension to ensure the square fits
-        int squareSize = (int)(size * 0.7f); // Reduce the size to 70% of the smaller dimension to crop the central part
 
-        // Calculate the top-left corner of the ROI to center it
+        int size = Math.min(mat.cols(), mat.rows());
+        int squareSize = (int)(size * 0.7f);
+
+
         int x = (mat.cols() - squareSize) / 2;
         int y = (mat.rows() - squareSize) / 2;
 
-        // Define the ROI and crop it
+
         Rect roi = new Rect(x, y, squareSize, squareSize);
         Mat cropped = new Mat(mat, roi);
 
-        // Resize the cropped image to 224x224 for the classifier
+        // Resize the cropped image to 224x224
         Mat resized = new Mat();
         Imgproc.resize(cropped, resized, new Size(224, 224));
 
-        return resized; // Return the processed image ready for classification
+        return resized;
     }
 
     void close() {

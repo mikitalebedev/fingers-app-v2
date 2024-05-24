@@ -270,21 +270,32 @@ public class RecognitionActivity extends AppCompatActivity implements CameraBrid
     private void runInterpreter() {
         if (classifier != null) {
             classifier.classifyMat(frame);
-            switch (classifier.getResult()) {
-                case "Пробел":
-                    if (text.length() < 22) {
-                        text += " ";
-                    }
-                case "Удалить":
-                    text = text.substring(0, text.length() - 1);
-                    break;
-                case "Ничего":
-                    break;
-                default:
-                    if (text.length() < 22) {  // Ограничение на 22 букв
-                        text += classifier.getResult();
-                    }
-            }
+            float probability = classifier.getProbability();
+            String result = classifier.getResult();
+
+
+            //if (probability > 0.7) {  // Ограничение вероятности 70%
+                switch (result) {
+                    case "Пробел":
+                        if (text.length() < 22) {
+                            text += " ";
+                        }
+                        break;
+                    case "Удалить":
+                        if (text.length() > 0) {
+                            text = text.substring(0, text.length() - 1);
+                        }
+                        break;
+                    case "Ничего":
+                            text += "";
+                        break;
+                    default:
+                        if (text.length() < 22) {  // Ограничение на 22 букв
+                            text += result;
+                        }
+                }
+            //}
+
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
@@ -292,7 +303,7 @@ public class RecognitionActivity extends AppCompatActivity implements CameraBrid
                     adjustTextSizeAndPosition();
                 }
             });
-            Log.d(TAG, "Предположение: " + classifier.getResult() + " Вероятность: " + classifier.getProbability());
+            Log.d(TAG, "Предположение: " + result + " Вероятность: " + probability);
         }
     }
 

@@ -59,7 +59,6 @@ public class TrainingActivity extends AppCompatActivity implements CameraBridgeV
     public Mat onCameraFrame(CameraBridgeViewBase.CvCameraViewFrame inputFrame) {
         mRGBA = inputFrame.rgba();
 
-
         if (mCameraIndex == 1) {
             Core.flip(mRGBA, mRGBA, 1);
         }
@@ -121,8 +120,7 @@ public class TrainingActivity extends AppCompatActivity implements CameraBridgeV
 
         try {
             classifier = new Classifier(this);
-            text = classifier.getRandomLabel();
-            resultTextView.setText(text);
+            updateRandomLabel();
         } catch (IOException e) {
             Log.e(TAG, "Не удалось инициализировать классификатор", e);
         }
@@ -162,17 +160,25 @@ public class TrainingActivity extends AppCompatActivity implements CameraBridgeV
     private void runInterpreter() {
         if (classifier != null) {
             classifier.classifyMat(frame);
-            if (!classifier.getResult().equals("Ничего") && classifier.getResult().equals(text)) {
+            String result = classifier.getResult();
+            if (result != null && text != null && !result.equals("Ничего") && result.equals(text)) {
                 score++;
-                text = classifier.getRandomLabel();
+                updateRandomLabel();
                 runOnUiThread(() -> {
                     String s = " " + score;
                     scoreTextView.setText(s);
                     resultTextView.setText(text);
                 });
             }
-            Log.d(TAG, "Предположение: " + classifier.getResult() + " Вероятность: " + classifier.getProbability());
+            Log.d(TAG, "Предположение: " + result + " Вероятность: " + classifier.getProbability());
         }
+    }
+
+    private void updateRandomLabel() {
+        do {
+            text = classifier.getRandomLabel();
+        } while (text == null || text.equals("Ничего"));
+        runOnUiThread(() -> resultTextView.setText(text));
     }
 
     public void onExitButtonClick() {
@@ -194,8 +200,7 @@ public class TrainingActivity extends AppCompatActivity implements CameraBridgeV
 
     public void onNextButtonClick() {
         if (classifier != null) {
-            text = classifier.getRandomLabel();
-            resultTextView.setText(text);
+            updateRandomLabel();
         }
     }
 }
