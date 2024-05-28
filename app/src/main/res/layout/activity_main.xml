@@ -130,6 +130,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:gravity="center_horizontal"
                 android:orientation="vertical">
 
@@ -165,7 +166,7 @@
                         android:layout_marginTop="33dp"
                         android:layout_marginEnd="89dp"
                         android:gravity="center"
-                        android:text="Теория "
+                        android:text="Словарь "
                         android:textColor="@color/colorAccentDark"
                         android:textStyle="bold" />
 
@@ -303,6 +304,7 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:weightSum="2">
@@ -411,6 +413,61 @@
                     </RelativeLayout>
 
                 </LinearLayout>
+                <RelativeLayout
+                    android:id="@+id/learnWords"
+                    android:layout_width="290dp"
+                    android:layout_height="101dp"
+                    android:layout_marginBottom="16dp"
+
+                    android:background="@drawable/round_violet3">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="123dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_marginEnd="127dp"
+                        android:layout_marginBottom="70dp"
+                        app:srcCompat="@drawable/bar" />
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="115dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="86dp"
+                        android:layout_marginTop="33dp"
+                        android:layout_marginEnd="89dp"
+                        android:gravity="center"
+                        android:text="Теория по словам "
+                        android:textColor="@color/colorAccentDark"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="147dp"
+                        android:layout_height="16dp"
+                        android:layout_below="@+id/textView2"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="70dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="73dp"
+                        android:layout_marginBottom="29dp"
+                        android:gravity="center"
+                        android:text="Узнавай новые символы!"
+                        android:textColor="@color/colorAccentDark"
+                        android:textSize="10sp" />
+                </RelativeLayout>
+
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -14,11 +14,11 @@ import java.util.Random;
 public class GamePlayActivity extends AppCompatActivity {
 
     private ImageView gestureImage, back;
-    private TextView letterText, scoreLabel, feedbackText, timerText;
+    private TextView letterText, scoreLabel, feedbackText, timerText, roundLabel;
     private Button buttonYes, buttonNo;
     private int score = 0;
-    private int round = 0;
-    private static final int TOTAL_ROUNDS = 10;
+    private int round = 1;
+    private static final int TOTAL_ROUNDS = 11;
     private static final int ROUND_TIME = 10000; // 5 seconds in milliseconds
     private CountDownTimer timer;
 
@@ -49,6 +49,7 @@ public class GamePlayActivity extends AppCompatActivity {
         buttonYes = findViewById(R.id.trueOrFalse);
         buttonNo = findViewById(R.id.button_no);
         back = findViewById(R.id.glasses);
+        roundLabel = findViewById(R.id.raund_label);
 
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -101,6 +102,7 @@ public class GamePlayActivity extends AppCompatActivity {
         letterText.setText(letters[currentLetterIndex]);
 
         timerText.setText("Время: 5");
+        roundLabel.setText("Раунд: " + round);
         feedbackText.setText("");
 
         timer = new CountDownTimer(ROUND_TIME, 1000) {

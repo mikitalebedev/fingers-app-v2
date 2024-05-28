@@ -137,6 +137,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        btnR = findViewById(R.id.learnWords);
+        btnR.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), TeoryWords.class);
+                startActivity(intent);
+            }
+        });
+
         btn = findViewById(R.id.profile);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
